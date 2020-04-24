@@ -5,6 +5,9 @@ var hometown = [
     {name:'지민', place:'부산', city:'경상도'}
 ];
 
+hometown.shift();
+console.log(hometown);
+
 var isHometown = function(h, name) {
     console.log(`함수가 실행되었습니다. ${h.city}도시에서 ${name}을 찾습니다.`);
 
@@ -16,9 +19,9 @@ var isHometown = function(h, name) {
 }
 
 var h ;
-while (h=hometown.shift()){
-    if(!h.name || !h.place || !h.city) continue;
 
+while (h=hometown.shift()){
+   if(!h.name || !h.place || !h.city) continue;
     var result = isHometown(h, '호석');
     if(result) break;
 }
