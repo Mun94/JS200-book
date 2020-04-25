@@ -11,3 +11,6 @@ var person = {
     [profile.split(':')[0]]: profile.split(':')[1]
 };
 console.log(person);
+
+var mun=null;
+console.log(mun+1);
