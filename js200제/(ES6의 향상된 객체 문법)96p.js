@@ -1,3 +1,4 @@
+//단축 속성명
 var address = 'Seoul';
 var members = {};
 
