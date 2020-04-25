@@ -6,6 +6,7 @@ function sum() {
     console.log(arguments instanceof Array);
     return total;
 }
+
 var sumOf = sum(1, 2, 3);
 console.log(sumOf);
 
