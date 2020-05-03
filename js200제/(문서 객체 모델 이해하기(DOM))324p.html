@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>DOM 이해하기</title>
+    </head>
+    <body>
+        <div id = "div1">hello DOM</div>
+        <ul>
+            <li>list item1</li>
+            <li>list item2</li>
+        </ul>
+
+        <script>
+            const div1El = document.getElementById('div1');
+            console.log(div1El.innerHTML); // hello DOM
+
+            console.log(div1El.nodeType); // 1
+            console.log(div1El.nodeType === Node.ELEMENT_MODE); // true
+
+            console.log(div1El.constructor); //콘솔에서 확인해볼것
+            console.log(div1El instanceof HTMLDivElement); // true 
+            console.log(div1El instanceof HTMLElement); // true
+            console.log(div1El instanceof Element); // true
+            console.log(div1El instanceof Node); // true
+            console.log(Element.prototype); // 콘솔에서 확인해볼것
+            console.log(div1El.tagName); // DIV
+
+            const div1El2 = document.querySelector('#div1');
+            console.log(div1El2.innerHTML); //hello DOM
+
+            const liEls = document.querySelectorAll('ul li');
+            
+            console.log(liEls.item(0).innerHTML); // list item1
+            console.log(liEls.item(1).textContent); // list item2
+        </script>
+    </body>
+</html>
