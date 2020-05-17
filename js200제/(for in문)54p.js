@@ -8,3 +8,7 @@ for (var item in store){ // for (속성명(key) in 반복할 대상)
     console.log(item + '는 가격이' + store[item] + '입니다.')
 }
 console.log('aa');
+
+for(const item2 of store){
+    console.log(store[item2]);
+}

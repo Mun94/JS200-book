@@ -5,9 +5,9 @@ for (let num of [1,2,3,4,5]) {
     map.set((value) => value * 2, num);
 }
 
-for (let [func, value] of map) {
-    console.log(`${func} ////// ${value}`);
-    console.log(`${func}`);
+for (let [aaaa, value] of map) {
+    console.log(`${aaaa} ////// ${value}`);
+    console.log(`${aaaa}`);
 
-    console.log(func(value));
+    console.log(aaaa(value));
 }

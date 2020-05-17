@@ -3,6 +3,7 @@ const map = new Map();
 map.set('one', 1);
 map.set('two', 2);
 
+console.log(map.entries());
 console.log(map);
 
 console.log('키 정보만 출력합니다.');
@@ -21,3 +22,6 @@ console.log('[forEach] 키, 값 정보를 동시에 출력합니다.');
 map.forEach((value, key) => {
     console.log(`키는 ${key} 값은 ${value}`);
 })
+
+const aaa = map.entries();
+console.log(aaa.next().done);

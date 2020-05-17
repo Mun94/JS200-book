@@ -5,9 +5,11 @@ var hometown = [
     {name:'지민', place:'부산', city:'경상도'}
 ];
 
-hometown.shift();
-console.log(hometown);
 
+console.log(hometown.shift());
+console.log(hometown.shift());
+console.log(hometown.shift());
+//console.log(hometown.shift());
 var isHometown = function(h, name) {
     console.log(`함수가 실행되었습니다. ${h.city}도시에서 ${name}을 찾습니다.`);
 
@@ -25,7 +27,7 @@ while (h=hometown.shift()){
     var result = isHometown(h, '호석');
     if(result) break;
 }
-
+/////////////////////////////////////////////////////////////
 var i = 0;
 var names = ['남준', '정국', '윤기', '호섭'];
 var cities = ['경기', '부산', '대구', '광주'];
@@ -35,3 +37,10 @@ do{
 } while(i < 4);
 
 console.log(hometown);
+
+
+let value = "qk";
+if(true){
+    let value = 'sss';
+    console.log(value);
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset = "utf8">
+    <title>이벤트 위임 처리</title>
+    <script>
+        function listl(self){
+        const todolist = ['공부하기','장보기','숙제하기'];
+        let list = '<ul id="todo-list">';
+        for(let i =0; i < todolist.length; i++){
+            list += `<li>${todolist[i]} <button class = "remove-button">X</li>`
+        }
+        return list+`</ul>`;}
+    </script>
+</head>
+<body>
+    <h2>할일</h2>
+    <script>
+        document
+            .write(listl(this));
+        document
+            .getElementById("todo-list")//.querySelector("ul#todo-list")
+            .addEventListener("click", e => {
+                if(e.target.className.indexOf('remove-button') < 0) {
+                    return;
+                }
+                const li = e.target.closest('li');
+                console.log(`${li.textContent} 삭제`)
+                li.remove();
+            });
+    </script>
+</body>
+</html>
